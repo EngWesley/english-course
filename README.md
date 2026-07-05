@@ -3,7 +3,7 @@
 Plataforma personalizada de estudos de inglês para atingir o nível B2/C1 em ~9 meses com 2h30/dia de dedicação.
 
 ## 🌐 Acesse a plataforma
-[EngWesley.github.io/english-course](https://engwesley.github.io/english-course)
+[engwesley.github.io/english-course](https://engwesley.github.io/english-course)
 
 ## 📋 Estrutura do Curso
 

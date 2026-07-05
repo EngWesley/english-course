@@ -355,7 +355,15 @@ function resourceCard(r) {
 function initRecursos(state) {
   const atual = getDiaAtual(state);
   const today = COURSE[atual - 1];
-  document.getElementById('todayResources').innerHTML = today.atividades.map(resourceCard).join('');
+  const todayResources = today.atividades.map((a) => ({
+    tipo: a.tipo,
+    icone: a.icone,
+    nome: a.link_texto,
+    descricao: a.instrucao,
+    fases: [today.fase],
+    link: a.link
+  }));
+  document.getElementById('todayResources').innerHTML = todayResources.map(resourceCard).join('');
 
   const allResources = collectResources();
   const phaseFilters = document.getElementById('phaseFilters');
