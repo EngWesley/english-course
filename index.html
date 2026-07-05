@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Course — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8wQ+8hB8nFfA9V0H9N7M0P0iP6LJ2Ew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="index.html">🇺🇸 English Course</a>
+      <nav class="menu">
+        <a class="active" href="index.html">Dashboard</a>
+        <a href="hoje.html">Aula de Hoje</a>
+        <a href="plano.html">Plano</a>
+        <a href="progresso.html">Progresso</a>
+        <a href="recursos.html">Recursos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="hero card">
+      <h1>Seu plano A2 → B2/C1 já está pronto</h1>
+      <p>Sem perda de tempo: abra a aula do dia, siga o checklist e evolua com consistência.</p>
+      <a class="btn btn-primary" href="hoje.html"><i class="fas fa-play"></i> Estudar Agora</a>
+    </section>
+
+    <section class="grid cards-grid">
+      <article class="card">
+        <h2>Seu progresso geral</h2>
+        <p id="progressText">0/252 dias concluídos</p>
+        <div class="progress"><span id="progressBar"></span></div>
+      </article>
+
+      <article class="card">
+        <h2>Fase atual</h2>
+        <p id="currentPhaseName">Carregando...</p>
+        <p id="currentPhaseMeta" class="muted"></p>
+        <div class="progress"><span id="phaseBar"></span></div>
+      </article>
+
+      <article class="card">
+        <h2>Streak</h2>
+        <p class="big-number">🔥 <span id="streakValue">0</span> dias</p>
+      </article>
+
+      <article class="card">
+        <h2>Próxima atividade</h2>
+        <p id="nextActivity">Abra a aula de hoje para iniciar.</p>
+        <a class="btn btn-primary full" href="hoje.html"><i class="fas fa-circle-play"></i> Estudar Agora</a>
+      </article>
+
+      <article class="card">
+        <h2>Estatísticas rápidas</h2>
+        <ul class="stats-list">
+          <li><span>Dias concluídos</span> <strong id="daysDone">0</strong></li>
+          <li><span>Palavras aprendidas</span> <strong id="wordsCount">0</strong></li>
+          <li><span>Semana atual</span> <strong id="weekCount">1</strong></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Linha do tempo das fases</h2>
+        <div id="timeline" class="timeline"></div>
+      </article>
+    </section>
+  </main>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+</html>
