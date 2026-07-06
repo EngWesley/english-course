@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Course — Aula do Dia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8wQ+8hB8nFfA9V0H9N7M0P0iP6LJ2Ew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="hoje">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="index.html">🇺🇸 English Course</a>
+      <nav class="menu">
+        <a href="index.html">Dashboard</a>
+        <a class="active" href="hoje.html">Aula de Hoje</a>
+        <a href="plano.html">Plano</a>
+        <a href="progresso.html">Progresso</a>
+        <a href="recursos.html">Recursos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="card">
+      <div class="day-header">
+        <h1 id="dayTitle">Dia 1</h1>
+        <span id="phaseBadge" class="badge phase">Fase 1</span>
+      </div>
+      <div class="progress-row">
+        <p><strong id="dayProgressText">0/5 atividades concluídas</strong></p>
+        <div class="progress"><span id="dayProgressBar"></span></div>
+      </div>
+      <div id="activities" class="activities"></div>
+      <button id="markDayDone" class="btn btn-primary full" type="button">✅ Marcar Dia como Concluído</button>
+    </section>
+
+    <section class="card motivational" id="motivationCard"></section>
+
+    <section class="day-nav">
+      <a id="prevDay" class="btn" href="#"><i class="fas fa-arrow-left"></i> Dia anterior</a>
+      <a id="nextDay" class="btn" href="#">Próximo dia <i class="fas fa-arrow-right"></i></a>
+    </section>
+  </main>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="app.js"></script>
+</body>
+</html>
